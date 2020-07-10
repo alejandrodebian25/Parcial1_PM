@@ -33,7 +33,15 @@ if($this->session->ci){
       /* Definir de acuerdo al alto de la imagen */
       border-radius: 25px;
       border: 2px solid #666;
-      /* position: relative; */
+
+    }
+   /* fondo de color  */
+    body{
+        background-color:<?=$color?> ;
+    }
+    select.color  {
+        background-color:<?=$color?> ;
+        color: white;
     }
 </style>
 </head>

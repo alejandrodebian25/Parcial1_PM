@@ -16,12 +16,18 @@ class Home extends CI_Controller {
 		$ci = $this->session->ci;
 		// obt datos de la bd
 		$data=$this->usuario_model->getUsuario($ci);
-
-		
 		// print_r($data);
-
 		$this->layout->view('home.view.php',$data);
 		
+	}
+	public function cambiarcolor(){
+		$color = $this->input->post('color');
+		//obt datos de la sesion 
+		$ci = $this->session->ci;
+		
+		$this->usuario_model->setColorUsuario($ci,$color);
+		// echo "$color";
+		redirect(base_url('home'));
 	}
 
 	public function logout()

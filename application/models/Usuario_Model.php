@@ -30,4 +30,20 @@ class Usuario_Model extends CI_Model {
        
     }
 
+    public function setColorUsuario($ci,$color){
+
+        $sql="UPDATE identificador SET color='".$color."' WHERE ci='".$ci."'";
+
+        if ($this->db->simple_query($sql))
+        {
+               return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+
+    }
+
 }

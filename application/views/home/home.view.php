@@ -23,14 +23,23 @@
 						<span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
-			<form>
-
+			<form action="<?= base_url(); ?>home/cambiarcolor" method="POST">
+            <div class="form-group">
+                <select class="form-control color" id="color" name="color" onchange="this.form.submit()">
+                <option value="#FFFFFF" >Sel. Color</option>
+                <option value="#1F618D">Azul</option>
+                <option value="#E74C3C">Rojo</option>
+                <option value="#16A085">Verde</option>
+                <option value="#6C3483">Violeta</option>
+                <option value="#1C2833 ">Negro</option>
+                </select>
+            </div>
             </form>
             
-            <a href="<?= base_url(); ?>home/logout" class="btn btn-sm btn-outline-danger">Cerrar Sesion</a>
+            <a href="<?= base_url(); ?>home/logout" class="btn btn-sm btn-outline-danger ml-2">Cerrar Sesion</a>
 
 		</div>
 	</div>
 </nav>
 
-<!-- <img src="<?=base_url('fotos/ale.jpg');?>" alt=""> -->
+
