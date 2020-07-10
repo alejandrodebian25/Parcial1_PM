@@ -12,8 +12,15 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		print_r($this->usuario_model->getUsuario('6945027'));
-		// $this->layout->view('home.view.php');
+		//obt datos de la sesion 
+		$ci = $this->session->ci;
+		// obt datos de la bd
+		$data=$this->usuario_model->getUsuario($ci);
+
+		
+		// print_r($data);
+
+		$this->layout->view('home.view.php',$data);
 		
 	}
 }

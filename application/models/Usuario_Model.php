@@ -10,8 +10,18 @@ class Usuario_Model extends CI_Model {
     
     public function getUsuario($ci){
         $sql="select * from identificador WHERE ci='".$ci."'";
-        $usuario=$this->db->query($sql)->result();
-        return $usuario;
+        $query=$this->db->query($sql);
+        $usuario=$query->row();
+
+        if (isset($usuario))
+        {
+
+            $data=['ci'=>$usuario->ci,'nombre'=>$usuario->nombre];
+            return $data;
+        }
+        else
+        { return $usuario;}
+       
     }
 
 }
