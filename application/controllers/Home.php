@@ -7,8 +7,13 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		//ruta privada
+		if(!$this->session->userdata('ci'))
+			redirect(base_url('login'));
+		
 		$this->load->model('usuario_model');
 	}
+
 
 	public function index()
 	{

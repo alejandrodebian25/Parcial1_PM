@@ -6,14 +6,16 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		//ruta publica
+		if($this->session->userdata('ci'))
+			redirect(base_url('home'));
+	
 		$this->load->model('login_model');
 	}
-
 
 	public function index()
 	{
 		$this->layout->view('login.view.php');
-		
 	}
 
 	public function validar()
@@ -33,17 +35,9 @@ class Login extends CI_Controller {
 				$this->session->set_flashdata('mensaje', 'Usuario o clave no validos');
 				redirect(base_url('login'));
 			};
-
-
-			
 		  }
 		else{
 			redirect(base_url('login'));
 		}
-
-
-		
-		
 	}
-
 }
