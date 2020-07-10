@@ -16,7 +16,13 @@ class Usuario_Model extends CI_Model {
         if (isset($usuario))
         {
 
-            $data=['ci'=>$usuario->ci,'nombre'=>$usuario->nombre];
+            $data=[
+                'ci'=>$usuario->ci,
+                'nombre'=>$usuario->nombre,
+                'apellidos'=>$usuario->apellidos,
+                'color'=>$usuario->color,
+                'foto'=>$usuario->foto
+            ];
             return $data;
         }
         else

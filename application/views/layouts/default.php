@@ -1,3 +1,11 @@
+<?php
+if($this->session->ci){
+  
+}
+
+
+?>
+
 <!doctype html>
 <html lang="es">
 
@@ -16,8 +24,16 @@
         background-color: #EBF5FB; 
         height: 100vh;
     }
-    .fondo{
-        
+    .foto {
+      background-image: url("../../fotos/<?=$foto?>");
+      background-size: cover;
+      width: 50px;
+      /* Definir de acuerdo al ancho de la imagen */
+      height: 50px;
+      /* Definir de acuerdo al alto de la imagen */
+      border-radius: 25px;
+      border: 2px solid #666;
+      /* position: relative; */
     }
 </style>
 </head>

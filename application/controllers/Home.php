@@ -23,4 +23,10 @@ class Home extends CI_Controller {
 		$this->layout->view('home.view.php',$data);
 		
 	}
+
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		redirect(base_url('login'));
+	}
 }
