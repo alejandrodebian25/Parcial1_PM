@@ -18,7 +18,7 @@ class Usuario_Model extends CI_Model {
 
             $data=[
                 'ci'=>$usuario->ci,
-                'nombre'=>$usuario->nombre,
+                'nombre'=>$usuario->nombres,
                 'apellidos'=>$usuario->apellidos,
                 'color'=>$usuario->color,
                 'foto'=>$usuario->foto

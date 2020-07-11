@@ -42,4 +42,11 @@
 	</div>
 </nav>
 
-
+<div class="container mt-5">
+<div class="alert alert-light" role="alert">
+  <h4 class="alert-heading">Bienvenido al sistema!</h4>
+  <hr>
+  <p>Genere un login por cada CI, ingresando a una pantalla de bienvenida (cuya cabecera indicara el nombre de su pagina, con una foto de usted con CSS) y un color por defecto (PHP), incluya select que tenga al menos tres colores..</p>
+  <hr>
+</div>
+</div>
