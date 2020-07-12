@@ -1,10 +1,4 @@
-<?php
-if($this->session->ci){
-  
-}
 
-
-?>
 
 <!doctype html>
 <html lang="es">
@@ -20,12 +14,21 @@ if($this->session->ci){
     <!-- <link rel="stylesheet" href="<?=base_url('assets/css/estilos.php')?>"> -->
     <title>Inf-324 1P</title>
 <style>
+    .codigo{
+    background-color: #1C2833;
+    color: white;
+    border-radius: 10px;
+    }
     .full{
         background-color: #EBF5FB; 
         height: 100vh;
     }
+
+    <?php 
+    if($this->session->userdata('ci')){
+    echo "
     .foto {
-      background-image: url("../../fotos/<?=$foto?>");
+      background-image: url('../../fotos/$foto');
       background-size: cover;
       width: 50px;
       /* Definir de acuerdo al ancho de la imagen */
@@ -35,14 +38,18 @@ if($this->session->ci){
       border: 2px solid #666;
 
     }
+
    /* fondo de color  */
     body{
-        background-color:<?=$color?> ;
+        background-color:$color ;
     }
     select.color  {
-        background-color:<?=$color?> ;
+        background-color:$color ;
         color: white;
     }
+    /*  */
+    ";}
+?>
 </style>
 </head>
 <body>
