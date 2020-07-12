@@ -25,10 +25,11 @@
     }
 
     <?php 
-    if($this->session->userdata('ci')){
+    if(isset($foto)){
+        $fotito= base_url()."fotos/".$foto;
     echo "
     .foto {
-      background-image: url('../../fotos/$foto');
+      background-image: url('$fotito');
       background-size: cover;
       width: 50px;
       /* Definir de acuerdo al ancho de la imagen */
